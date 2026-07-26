@@ -4,8 +4,13 @@
 // juego llene la pantalla completa sin estirar los sprites (misma escala,
 // más o menos mundo visible según el tamaño de la ventana).
 const ZOOM = 3; // px de pantalla por px de juego
-const VIEW_MIN_W = 320, VIEW_MAX_W = 960;
-const VIEW_MIN_H = 200, VIEW_MAX_H = 600;
+// Mínimos bajos a propósito: en un iPhone angosto, ancho/ZOOM ya puede caer
+// cerca de 130 — si el mínimo fuera mayor (como el 320 que tenía antes),
+// solo el ancho se recortaba y el canvas quedaba con una proporción distinta
+// a su caja CSS, así que el navegador lo estiraba para que encajara (eso
+// era el "pixeles estirados" en el iPhone).
+const VIEW_MIN_W = 120, VIEW_MAX_W = 960;
+const VIEW_MIN_H = 90, VIEW_MAX_H = 600;
 let VIEW_W = 384; // 24 tiles, valor inicial hasta el primer resize
 let VIEW_H = 240; // 15 tiles
 
@@ -35,10 +40,22 @@ const ctx = canvas.getContext("2d");
 ctx.imageSmoothingEnabled = false;
 
 function resizeCanvas() {
-  let w = Math.round(window.innerWidth / ZOOM / 2) * 2;
-  let h = Math.round(window.innerHeight / ZOOM / 2) * 2;
-  VIEW_W = Math.max(VIEW_MIN_W, Math.min(VIEW_MAX_W, w));
-  VIEW_H = Math.max(VIEW_MIN_H, Math.min(VIEW_MAX_H, h));
+  const cssW = window.innerWidth;
+  const cssH = window.innerHeight;
+
+  // Un solo factor de escala para los dos ejes — nunca se recortan por
+  // separado. Si se hiciera por separado (como antes), el canvas podía
+  // terminar con una proporción distinta a la de su caja CSS (100vw x
+  // 100dvh) y el navegador estiraba el bitmap de forma no uniforme para
+  // rellenarla: eso era el efecto de "píxeles estirados".
+  let scale = 1 / ZOOM;
+  if (cssW * scale < VIEW_MIN_W) scale = VIEW_MIN_W / cssW;
+  else if (cssW * scale > VIEW_MAX_W) scale = VIEW_MAX_W / cssW;
+  if (cssH * scale < VIEW_MIN_H) scale = VIEW_MIN_H / cssH;
+  else if (cssH * scale > VIEW_MAX_H) scale = VIEW_MAX_H / cssH;
+
+  VIEW_W = Math.max(2, Math.round((cssW * scale) / 2) * 2);
+  VIEW_H = Math.max(2, Math.round((cssH * scale) / 2) * 2);
   canvas.width = VIEW_W;
   canvas.height = VIEW_H;
   ctx.imageSmoothingEnabled = false;

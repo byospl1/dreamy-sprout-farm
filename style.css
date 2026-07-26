@@ -64,8 +64,8 @@ html, body {
   font-size: 14px;
 }
 
-.hud-top { top: 10px; left: 10px; }
-.hud-inv { top: 10px; right: 10px; flex-direction: column; align-items: flex-end; }
+.hud-top { top: max(10px, env(safe-area-inset-top)); left: 10px; }
+.hud-inv { top: max(10px, env(safe-area-inset-top)); right: 10px; flex-direction: column; align-items: flex-end; }
 .hud-bottom {
   bottom: 10px;
   left: 50%;
@@ -93,7 +93,7 @@ html, body {
 .chip.lvl { color: #ffe9a8; }
 
 .hud-study {
-  top: 44px;
+  top: calc(max(10px, env(safe-area-inset-top)) + 34px);
   left: 10px;
   pointer-events: auto;
 }
@@ -643,9 +643,9 @@ html, body {
     -ms-overflow-style: none;
   }
   .hud-top::-webkit-scrollbar, .hud-study::-webkit-scrollbar { display: none; }
-  .hud-top { top: 6px; }
-  .hud-study { top: 38px; bottom: auto; }
-  .hud-inv { top: 6px; right: 6px; gap: 4px; }
+  .hud-top { top: max(6px, env(safe-area-inset-top)); }
+  .hud-study { top: calc(max(6px, env(safe-area-inset-top)) + 32px); bottom: auto; }
+  .hud-inv { top: max(6px, env(safe-area-inset-top)); right: 6px; gap: 4px; }
   .item { padding: 2px 6px 2px 3px; font-size: 11px; }
 
   #hotbar { gap: 4px; }
