@@ -8,6 +8,7 @@
 html, body {
   margin: 0;
   height: 100%;
+  height: 100dvh;
   overflow: hidden;
   overscroll-behavior: none;
   background: #7fb8d8;
@@ -17,7 +18,12 @@ html, body {
 
 #cloud-code-input { user-select: text; }
 
-.stage { width: 100vw; height: 100vh; }
+/* 100dvh = alto real visible. 100vh en Safari iOS mide el alto con la barra
+   de direcciones OCULTA, así que con la barra visible (el estado normal al
+   abrir la página) todo lo anclado abajo (joystick, botones) quedaba
+   recortado detrás de la barra. Los navegadores que no soportan dvh se
+   quedan con el 100vh de la línea anterior. */
+.stage { width: 100vw; height: 100vh; height: 100dvh; }
 
 .screen {
   position: relative;
@@ -31,6 +37,7 @@ html, body {
   display: block;
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
   touch-action: none;
@@ -647,11 +654,27 @@ html, body {
 
   .help-pop { bottom: 50px; right: 6px; max-width: 90vw; font-size: 12px; }
 
-  .study-panel, .market-panel, .cloud-panel { width: 100vw; height: 100vh; max-height: 100vh; border-radius: 0; border-width: 0; }
+  .study-panel, .market-panel, .cloud-panel {
+    width: 100vw;
+    height: 100vh; height: 100dvh;
+    max-height: 100vh; max-height: 100dvh;
+    border-radius: 0; border-width: 0;
+  }
   .tabs { flex-wrap: wrap; }
   .tabs button { padding: 8px 10px; font-size: 12.5px; }
   .rooms { grid-template-columns: 1fr; }
   .match { grid-template-columns: 1fr; }
   .dhead { flex-direction: column; }
   .dpct { text-align: left; }
+}
+
+/* Teléfonos angostos (iPhone Pro y similares): el estudio/mercado se
+   reducen a solo el ícono para dejarle sitio a lo demás en la tira. */
+@media (max-width: 430px) {
+  .study-chip, .market-chip { padding: 4px 8px; font-size: 0; }
+  .study-chip::before { content: "🗼"; font-size: 15px; }
+  .market-chip::before { content: "🐔"; font-size: 15px; }
+  .chip { padding: 3px 6px; }
+  .hud-top, .hud-study { right: 74px; }
+  .slot { width: 42px; height: 42px; }
 }

@@ -45,6 +45,12 @@ function resizeCanvas() {
 }
 resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
+window.addEventListener("orientationchange", resizeCanvas);
+// En iOS Safari la barra de direcciones se muestra/oculta sin disparar
+// siempre "resize" en window — visualViewport sí se entera.
+if (window.visualViewport) {
+  window.visualViewport.addEventListener("resize", resizeCanvas);
+}
 
 // El maná es la bisagra entre estudio y granja: solo se recarga estudiando.
 const MANA_COST = { hoe: 1, seed: 3 };
