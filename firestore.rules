@@ -1,0 +1,15 @@
+rules_version = '2';
+
+// Sin login: cada partida se identifica por un código corto (ver src/cloud.js),
+// no por un usuario autenticado. Por eso estas reglas son permisivas —
+// cualquiera que conozca el código puede leer/escribir ese documento.
+// Aceptable para el progreso de un juego personal; NO guardes aquí datos
+// sensibles. Si algún día agregas Firebase Auth, endurece esto exigiendo
+// request.auth.uid == código.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /granjas/{codigo} {
+      allow read, write: if true;
+    }
+  }
+}

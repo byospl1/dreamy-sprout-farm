@@ -1,0 +1,201 @@
+{
+  "version": "2026-S29",
+  "generado": "2026-07-17",
+  "mazmorras": [
+    {
+      "id": "voluntad-saber",
+      "libro": "La voluntad de saber",
+      "autor": "Michel Foucault",
+      "nombre": "Cripta de los Discursos",
+      "resumen": "Deconstrucción de la 'hipótesis represiva': la modernidad no silenció el sexo, multiplicó sus discursos. El poder normaliza mediante confesión, medicina y psiquiatría.",
+      "salas": [
+        {"id": "vs-1", "nombre": "Sala de la Hipótesis Represiva", "monstruo": "Censor Espectral", "sprite": "ghost", "preguntas": [
+          {"q": "Según Foucault, ¿qué hizo la modernidad con el sexo?", "o": ["Lo silenció por completo", "Multiplicó e institucionalizó los discursos sobre él", "Lo liberó de toda regla"], "c": 1, "x": "Desde el siglo XVIII hubo una explosión discursiva: incitación política, económica y técnica a hablar del sexo."},
+          {"q": "La 'policía del sexo' busca…", "o": ["La prohibición absoluta", "Reglamentar el sexo mediante discursos útiles y públicos", "Eliminar el placer"], "c": 1, "x": "No el rigor de una prohibición, sino la necesidad de reglamentar."},
+          {"q": "Lo propio de las sociedades modernas es…", "o": ["Hablar del sexo siempre, poniéndolo de relieve como el secreto", "Guardar silencio absoluto", "Ignorar el tema"], "c": 0, "x": "El sexo como fábula indispensable de una economía proliferante del discurso."}
+        ]},
+        {"id": "vs-2", "nombre": "Cámara de la Confesión", "monstruo": "Inquisidor sin Rostro", "sprite": "cultist", "preguntas": [
+          {"q": "La confesión, para Foucault, es…", "o": ["Un ritual de producción de verdad ante una autoridad", "Un simple desahogo privado", "Un acto sin efectos de poder"], "c": 0, "x": "El sujeto se ve obligado a verbalizar sus deseos y actos más íntimos ante una autoridad."},
+          {"q": "La confesión obligatoria convierte al sexo en…", "o": ["Un tema irrelevante", "Un secreto permanente que debe verbalizarse constantemente", "Un tabú jamás mencionado"], "c": 1, "x": "El sexo como el gran secreto que define la verdad del sujeto."},
+          {"q": "El sexo se constituyó como…", "o": ["El gran secreto que define la verdad del sujeto", "Un tema menor de la vida privada", "Algo puramente biológico, sin política"], "c": 0, "x": "Esa dinámica no busca hacerlo desaparecer, sino administrarlo y multiplicarlo."}
+        ]},
+        {"id": "vs-3", "nombre": "Galería de la Normalización", "monstruo": "Alienista Mecánico", "sprite": "golem", "preguntas": [
+          {"q": "¿Cuándo 'nace' la homosexualidad como categoría psicológica?", "o": ["Con el artículo de Westphal (1870)", "En la Grecia clásica", "Con el DSM-III"], "c": 0, "x": "Pasó de acto condenable a identidad patológica: cierta 'cualidad de la sensibilidad sexual'."},
+          {"q": "La normalización opera mediante…", "o": ["La medicina y la psiquiatría, que definen y corrigen conductas", "Solamente leyes penales", "La censura de la prensa"], "c": 0, "x": "Corrigen las conductas para adaptarlas a un estándar social."},
+          {"q": "Medicina y pedagogía convirtieron la sexualidad infantil en…", "o": ["Un foco de vigilancia constante y pánico moral", "Un tema libre", "Un asunto exclusivamente familiar"], "c": 0, "x": "Vigilancia médica y pedagógica constante de la infancia."}
+        ]},
+        {"id": "vs-4", "nombre": "Trono de la Biopolítica", "monstruo": "Leviatán de Registros", "sprite": "eye", "preguntas": [
+          {"q": "'Biopolítica' es…", "o": ["Tecnología de poder que gestiona la vida y la población", "La política de los biólogos", "Una ley de bioética"], "c": 0, "x": "Gestiona la vida, la población y los procesos biológicos de la sociedad."},
+          {"q": "Para Foucault, el poder…", "o": ["Solo reprime y prohíbe", "Produce realidades, saberes y placeres", "Es propiedad de una clase"], "c": 1, "x": "Red móvil de relaciones de fuerza, no mera represión."},
+          {"q": "Poder y placer…", "o": ["Se excluyen mutuamente", "Se persiguen y realimentan en espirales continuas", "Son idénticos"], "c": 1, "x": "'Espirales perpetuas del poder y del placer'."}
+        ]}
+      ],
+      "jefe": {"nombre": "El Archivista de la Verdad", "sprite": "lich", "preguntas": [
+        {"q": "El Estado moderno vincula su futuro y fortuna a…", "o": ["El control de las prácticas sexuales de sus ciudadanos", "La abolición del discurso", "Únicamente la religión"], "c": 0, "x": "Demografía y prácticas sexuales como asunto de Estado."},
+        {"q": "'Discurso' en Foucault:", "o": ["Enunciados institucionalizados que producen y regulan la verdad", "Cualquier charla informal", "Solo textos jurídicos"], "c": 0, "x": "Producen, regulan y legitiman la verdad sobre un tema."},
+        {"q": "La dinámica moderna sobre el sexo busca…", "o": ["Hacerlo desaparecer", "Administrarlo y multiplicarlo", "Devolverlo al ámbito religioso"], "c": 1, "x": "Una red donde poder y placer se alimentan mutuamente."},
+        {"q": "La psiquiatría del s. XIX transformó la homosexualidad en…", "o": ["Una identidad patológica y psicológica", "Un mero acto condenable", "Una moda pasajera"], "c": 0, "x": "De conducta aislada a identidad sujeta a control."}
+      ]}
+    },
+    {
+      "id": "tribu-propia",
+      "libro": "Una tribu propia: Autismo y el futuro de la neurodiversidad",
+      "autor": "Steve Silberman",
+      "nombre": "Fortaleza de la Tribu Perdida",
+      "resumen": "Crónica histórica del autismo: de las teorías patologizantes (Kanner, Bettelheim) al redescubrimiento de Asperger y la neurodiversidad como variación natural.",
+      "salas": [
+        {"id": "tp-1", "nombre": "Patio de los Diagnósticos", "monstruo": "Quimera de Etiquetas", "sprite": "snake", "preguntas": [
+          {"q": "El problema del diagnóstico de Kanner era que…", "o": ["Era demasiado delimitado", "Era demasiado amplio", "No existía"], "c": 0, "x": "Condenaba a muchos niños al diagnóstico erróneo o la reclusión."},
+          {"q": "La 'esquizofrenia infantil' como categoría era…", "o": ["Muy precisa", "Tan difusa que mezclaba tipologías muy dispares", "Exclusiva de adultos"], "c": 1, "x": "El problema opuesto al de Kanner: fronteras difusas."},
+          {"q": "El enfoque de Hans Asperger veía el autismo como…", "o": ["Un espectro con potencial de adaptación y genialidad", "Una psicosis infantil", "Culpa de los padres"], "c": 0, "x": "Ignorado durante décadas en favor del modelo restrictivo de Kanner."}
+        ]},
+        {"id": "tp-2", "nombre": "Mazmorra de las Madres Refrigerador", "monstruo": "Espectro de Bettelheim", "sprite": "ghost", "preguntas": [
+          {"q": "La teoría de las 'madres refrigerador'…", "o": ["Culpó injustamente a los padres y desvió la investigación durante décadas", "Fue confirmada científicamente", "La propuso Hans Asperger"], "c": 0, "x": "Un daño incalculable atribuido a Bruno Bettelheim."},
+          {"q": "¿Quién lideró la desculpabilización de los padres?", "o": ["Bernard Rimland", "Leo Kanner", "Bruno Bettelheim"], "c": 0, "x": "Junto con Sullivan alzó 'un poderoso ejército' de familias."},
+          {"q": "Desculpabilizar a las familias desencadenó…", "o": ["Un enorme estallido de productividad y creatividad", "Menos servicios de apoyo", "Silencio institucional"], "c": 0, "x": "Palabras de Rimland: activismo en nombre de aquellos niños."}
+        ]},
+        {"id": "tp-3", "nombre": "Celdas de la Institución", "monstruo": "Carcelero de Asilos", "sprite": "golem", "preguntas": [
+          {"q": "La institucionalización sistemática de niños autistas…", "o": ["Impidió su educación y perpetuó el mito de que no podían aprender", "Ayudó a su desarrollo", "Fue un fenómeno breve"], "c": 0, "x": "Reclusión en asilos que privaba de educación y desarrollo social."},
+          {"q": "El autismo, según el libro, es…", "o": ["Una variación neurológica innata que ha existido siempre", "Una enfermedad moderna", "Una psicosis infantil"], "c": 0, "x": "No es tragedia médica sino forma alternativa de procesamiento humano."},
+          {"q": "Para adultos no diagnosticados, la visión de Kanner implicó…", "o": ["Décadas de vagar sin explicación para sus luchas diarias", "Diagnóstico temprano", "Más apoyos laborales"], "c": 0, "x": "'Navegar sin rumbo por el caos de la vida diaria'."}
+        ]},
+        {"id": "tp-4", "nombre": "Taller de las Máquinas Amigas", "monstruo": "Autómata Centinela", "sprite": "imp", "preguntas": [
+          {"q": "La tecnología y la informática sirvieron históricamente como…", "o": ["Nichos de socialización y desarrollo para mentes neurodivergentes", "Una distracción dañina", "Un sustituto de la terapia"], "c": 0, "x": "De la radioafición a la computación personal: la 'tribu perdida' construyó el mundo en red."},
+          {"q": "Lettick constató que lo esencial era…", "o": ["Permitirles comunicarse, no solo enseñarles a hablar", "Forzar el habla verbal", "Aplicar castigos"], "c": 0, "x": "La comunicación va mucho más allá del habla."},
+          {"q": "Las terapias aversivas del conductismo temprano…", "o": ["Eran eficaces a largo plazo", "Resultaron ineficaces frente a enseñar conductas adaptativas", "Siguen siendo el estándar"], "c": 1, "x": "El castigo físico demostró ser ineficaz a largo plazo."}
+        ]}
+      ],
+      "jefe": {"nombre": "Señor del Asilo", "sprite": "lich", "preguntas": [
+        {"q": "'Neurodiversidad' significa…", "o": ["Las diferencias neurológicas son variaciones naturales del genoma humano", "Una cura del autismo", "Un diagnóstico del DSM"], "c": 0, "x": "No patologías que deban curarse."},
+        {"q": "'Tecnología asistiva':", "o": ["Herramientas que facilitan aprender y comunicarse sin la presión del juicio humano", "Solo prótesis médicas", "Videojuegos educativos"], "c": 0, "x": "De máquinas de escribir interactivas a computadoras."},
+        {"q": "El motor principal de los servicios educativos reales fue…", "o": ["El activismo de los padres y la desculpabilización familiar", "El gobierno federal", "La psiquiatría clásica"], "c": 0, "x": "La batalla por el futuro de sus hijos."},
+        {"q": "'Estigmatización' en este contexto:", "o": ["Atribuir culpa y vergüenza a padres o individuos por teorías pseudocientíficas", "Un proceso legal", "Una técnica terapéutica"], "c": 0, "x": "Como la teoría de las madres refrigerador."}
+      ]}
+    },
+    {
+      "id": "nino-superviviente",
+      "libro": "El niño superviviente: Curar el trauma del desarrollo",
+      "autor": "Joyanna L. Silberg",
+      "nombre": "Caverna del Superviviente",
+      "resumen": "Trauma del desarrollo y disociación infantil desde la adaptación, no la patología: los síntomas son defensas creativas; la terapia valida su función y construye nuevas herramientas.",
+      "salas": [
+        {"id": "ns-1", "nombre": "Umbral de las Seis Heridas", "monstruo": "Sombra Temerosa", "sprite": "bat", "preguntas": [
+          {"q": "El trauma temprano afecta seis áreas clave, entre ellas…", "o": ["Regulación afectiva, conciencia y autopercepción", "Solo la memoria", "Solo la conducta escolar"], "c": 0, "x": "También percepción del agresor, relaciones y sistemas de significado."},
+          {"q": "Los síntomas del niño traumatizado son…", "o": ["Adaptaciones funcionales desarrolladas por necesidad para sobrevivir", "Pura patología", "Manipulación deliberada"], "c": 0, "x": "Cortarse, mentir o pelear atiende a buenas e importantes razones."},
+          {"q": "El trauma repetido altera…", "o": ["Las vías del miedo en el cerebro", "Solo el estado de ánimo", "Nada a nivel biológico"], "c": 0, "x": "Respuestas fisiológicas inmediatas y descontroladas ante desencadenantes."}
+        ]},
+        {"id": "ns-2", "nombre": "Espejos de la Disociación", "monstruo": "Doble Espectral", "sprite": "ghost", "preguntas": [
+          {"q": "'Disociación' es…", "o": ["Fragmentación de conciencia, memoria, identidad o percepción como defensa", "Falta de atención", "Mentira deliberada"], "c": 0, "x": "Alteración de funciones normalmente integradas."},
+          {"q": "La disociación funciona como…", "o": ["Evitación afectiva automática ante estímulos asociados al peligro original", "Búsqueda de atención", "Un juego infantil"], "c": 0, "x": "Patrones sobreaprendidos que evitan la reactividad emocional."},
+          {"q": "Los amigos imaginarios en niños disociativos suelen ser…", "o": ["Más complejos, controladores y malévolos", "Iguales que en cualquier niño", "Signo de creatividad sana"], "c": 0, "x": "Proyecciones de estados internos fragmentados."}
+        ]},
+        {"id": "ns-3", "nombre": "Santuario del Pegamento Psíquico", "monstruo": "Gólem de Afectos", "sprite": "slime", "preguntas": [
+          {"q": "¿Cuántos estados afectivos innatos propone Tomkins?", "o": ["Nueve", "Cinco", "Doce"], "c": 0, "x": "Seis negativos, uno neutro (sorpresa) y dos positivos (interés y disfrute)."},
+          {"q": "Para Tomkins, los afectos son…", "o": ["El 'pegamento psíquico' que mantiene unificada la experiencia del yo", "Ruido emocional", "Aprendizajes culturales"], "c": 0, "x": "Respuestas biológicas e innatas."},
+          {"q": "De los nueve afectos, ¿cuántos son negativos?", "o": ["Seis", "Dos", "Todos"], "c": 0, "x": "Ira, miedo, malestar, disgusto, desdén y vergüenza."}
+        ]},
+        {"id": "ns-4", "nombre": "Cámara del Futuro", "monstruo": "Guardián de Metas", "sprite": "imp", "preguntas": [
+          {"q": "La terapia debe enfocarse en…", "o": ["Identificar momentos de transición crítica y enseñar conductas alternativas", "Castigar el síntoma", "Ignorar los síntomas"], "c": 0, "x": "En lugar de castigar el síntoma, validar su función protectora."},
+          {"q": "Hasta el niño más desmoralizado…", "o": ["Conserva metas y deseos para el futuro que motorizan el cambio", "No tiene futuro", "Debe ser medicado siempre"], "c": 0, "x": "'Puede decirnos algo que quiera conseguir en el futuro'."},
+          {"q": "'Neurobiología interpersonal' estudia…", "o": ["Cómo las relaciones tempranas moldean las rutas neuronales del afecto", "La genética pura", "Neuronas aisladas"], "c": 0, "x": "El vínculo cuidador-niño construye la regulación afectiva."}
+        ]}
+      ],
+      "jefe": {"nombre": "Behemot del Trauma", "sprite": "golem", "preguntas": [
+        {"q": "'Trauma del desarrollo':", "o": ["Impacto acumulativo de múltiples traumas tempranos y negligencia", "Un solo evento en la adultez", "Estrés escolar común"], "c": 0, "x": "De inicio temprano, en niños y adolescentes."},
+        {"q": "Amy: 'olvidar es lo que mejor hago en la vida' ilustra…", "o": ["La disociación como doble vida forzada", "Mala memoria", "Desinterés"], "c": 0, "x": "Forzada a vivir una doble vida y olvidar lo que ocurría."},
+        {"q": "'Mecanismo de adaptación':", "o": ["Conductas desarrolladas por necesidad para sobrevivir a un entorno hostil", "Un defecto genético", "Un capricho conductual"], "c": 0, "x": "Ajuste a un entorno hostil o postraumático."},
+        {"q": "La perspectiva del libro sobre el niño superviviente es…", "o": ["Desde la adaptación, no desde la patología", "Desde el castigo", "Desde el diagnóstico rígido"], "c": 0, "x": "Defensas necesarias y creativas para sobrevivir."}
+      ]}
+    },
+    {
+      "id": "triste-tigre",
+      "libro": "Triste tigre",
+      "autor": "Neige Sinno",
+      "nombre": "Guarida del Triste Tigre",
+      "resumen": "El abuso sexual infantil como manifestación de poder y dominación, no de deseo; el silencio como cómplice; la escritura como vía de sanación y soberanía.",
+      "salas": [
+        {"id": "tt-1", "nombre": "Sala del Falso Monstruo", "monstruo": "Máscara del Ogro", "sprite": "imp", "preguntas": [
+          {"q": "El agresor, lejos del 'monstruo mitológico', es…", "o": ["Un ser patético pero altamente manipulador", "Un genio incomprendido", "Un enfermo sin responsabilidad"], "c": 0, "x": "Opera gracias a la complicidad del silencio familiar y social."},
+          {"q": "'Hay que considerar que la violación es más una cuestión de…'", "o": ["Poder", "Deseo", "Azar"], "c": 0, "x": "Mecanismo pseudosexual de dominación, control y poder."},
+          {"q": "¿Por qué cometen abusos los soldados, según el historiador citado?", "o": ["Porque pueden; la sociedad se lo permite", "Por instinto natural", "Por órdenes superiores"], "c": 0, "x": "La impunidad como catalizador: 'ese es el verdadero teatro de la crueldad'."}
+        ]},
+        {"id": "tt-2", "nombre": "Pasillo del Silencio", "monstruo": "Serpiente Muda", "sprite": "snake", "preguntas": [
+          {"q": "El verdadero tabú social es…", "o": ["Nombrar, analizar y confrontar el abuso abiertamente", "La existencia del abuso", "Hablar de sexo en general"], "c": 0, "x": "No la existencia del abuso, sino la acción de nombrarlo."},
+          {"q": "El abuso sexual infantil corrompe…", "o": ["La dinámica de todo el núcleo familiar a través del silencio", "Solo a la víctima directa", "Únicamente la memoria"], "c": 0, "x": "Organiza y corrompe a toda la familia."},
+          {"q": "¿Existe un perfil psicológico único del agresor sexual?", "o": ["No, aunque la inmensa mayoría son varones", "Sí: el psicópata clásico", "Sí: el desconocido callejero"], "c": 0, "x": "No hay perfil único."}
+        ]},
+        {"id": "tt-3", "nombre": "Altar de la Palabra", "monstruo": "Eco Encadenado", "sprite": "ghost", "preguntas": [
+          {"q": "Expresar el trauma en palabras permite…", "o": ["Restarle poder de daño y separar el acontecimiento del sufrimiento", "Olvidarlo todo", "Vengarse del agresor"], "c": 0, "x": "'Solo expresándolo en palabras le doy el carácter de algo íntegro… ha perdido el poder de causarme daño'."},
+          {"q": "El trauma es también…", "o": ["Un fenómeno biológico que altera neuronas, hormonas e inmunidad", "Solo un daño psicológico", "Una metáfora literaria"], "c": 0, "x": "Altera circuitos neuronales, hormonas y sistema inmunitario."},
+          {"q": "'Lo que importa no es lo que han hecho de nosotros, sino…'", "o": ["Lo que hacemos con lo que han hecho de nosotros", "Olvidar el pasado", "Castigar al culpable"], "c": 0, "x": "Se trataba de elegir dentro de ese saco."}
+        ]}
+      ],
+      "jefe": {"nombre": "El Tigre de Papel", "sprite": "wolf", "preguntas": [
+        {"q": "'Resiliencia' en este libro:", "o": ["Transformar el daño en narrativa de supervivencia mediante la palabra", "Aguantar sin quejarse", "El olvido total"], "c": 0, "x": "Recuperar la soberanía sobre la propia vida."},
+        {"q": "'Dominación':", "o": ["Control total que anula la voluntad del otro: física, psicológica y simbólica", "Solo violencia física", "Autoridad legítima"], "c": 0, "x": "Estructura de control total."},
+        {"q": "Los principales catalizadores de la violencia extrema son…", "o": ["La impunidad y la permisividad social", "La pobreza", "Los medios de comunicación"], "c": 0, "x": "'Los agresores actúan simplemente porque pueden hacerlo'."},
+        {"q": "'Identidad' aquí se refiere a…", "o": ["La reconstrucción del ser tras el sometimiento", "El documento oficial", "El rol social fijo"], "c": 0, "x": "Reconstrucción tras la voluntad destructiva del agresor."}
+      ]}
+    },
+    {
+      "id": "psicologia-mexicano",
+      "libro": "Psicología del Mexicano",
+      "autor": "Desconocido",
+      "nombre": "Ermita del Altiplano",
+      "resumen": "Perfil psicológico tradicional del mexicano: abnegado, sometido y tradicionalista; valores de familia, patria y religión.",
+      "salas": [
+        {"id": "pm-1", "nombre": "Nave de los Tres Valores", "monstruo": "Duende Guardián", "sprite": "imp", "preguntas": [
+          {"q": "Los valores fundamentales del mexicano según el texto:", "o": ["Familia, patria y religión", "Trabajo, dinero y éxito", "Libertad, igualdad y fraternidad"], "c": 0, "x": "Los tres pilares del perfil tradicional."},
+          {"q": "El perfil psicológico descrito es…", "o": ["Abnegado, sometido y tradicionalista", "Rebelde y moderno", "Individualista y ambicioso"], "c": 0, "x": "El texto describe el perfil tradicional."},
+          {"q": "'Abnegado' significa…", "o": ["Dispuesto a sacrificarse por los demás", "Egoísta", "Indiferente"], "c": 0, "x": "No vive para sí, sino para otros."}
+        ]}
+      ],
+      "jefe": {"nombre": "Coloso de Obsidiana", "sprite": "golem", "preguntas": [
+        {"q": "'Sometido':", "o": ["De carácter dócil y obediente", "Líder natural", "Aislado socialmente"], "c": 0, "x": "De niña al padre y a la madre; de adulta a su hombre."},
+        {"q": "'Tradicionalista':", "o": ["Valoriza las costumbres y tradiciones establecidas", "Rechaza el pasado", "Busca innovar siempre"], "c": 0, "x": "Las costumbres como valor central."},
+        {"q": "Según el texto, la mujer tradicional tiende a simbolizar…", "o": ["El pasado", "El presente", "El futuro"], "c": 0, "x": "'La mujer tiende a simbolizar el pasado; el hombre, el presente'."}
+      ]}
+    }
+  ],
+  "dragon": {
+    "nombre": "Dragón de las Convergencias",
+    "semana": "2026-S29",
+    "intro": "El dragón cruza los saberes de tus 5 libros. Solo quien domina las convergencias puede enfrentarlo.",
+    "preguntas": [
+      {"q": "(Foucault) La modernidad ha ___ el sexo:", "o": ["Multiplicado e institucionalizado sus discursos", "Silenciado por completo", "Prohibido penalmente"], "c": 0, "x": "Convergencia de la semana 29."},
+      {"q": "(Silberg) El trauma temprano afecta gravemente…", "o": ["Seis áreas clave del desarrollo", "Solo la memoria", "Únicamente el apego"], "c": 0, "x": "Regulación afectiva, conciencia, autopercepción, percepción del agresor, relaciones y significado."},
+      {"q": "Síntesis de la semana:", "o": ["Los discursos sociales moldean la percepción del sexo y el trauma temprano marca el desarrollo", "Los libros no se relacionan entre sí", "Solo importa la biología"], "c": 0, "x": "Tu síntesis del 2026-07-16."}
+    ]
+  },
+  "cartas": [
+    {"id": "c-discurso", "frente": "Discurso", "dorso": "Conjunto de enunciados institucionalizados que producen, regulan y legitiman la verdad sobre un tema específico.", "libro": "La voluntad de saber"},
+    {"id": "c-poder", "frente": "Poder", "dorso": "Red móvil de relaciones de fuerza que produce realidades, saberes y placeres en lugar de limitarse a reprimir.", "libro": "La voluntad de saber"},
+    {"id": "c-confesion", "frente": "Confesión", "dorso": "Ritual de producción de verdad donde el sujeto verbaliza sus deseos y actos más íntimos ante una autoridad.", "libro": "La voluntad de saber"},
+    {"id": "c-normalizacion", "frente": "Normalización", "dorso": "Proceso mediante el cual la medicina y la psiquiatría definen y corrigen las conductas para adaptarlas a un estándar social.", "libro": "La voluntad de saber"},
+    {"id": "c-biopolitica", "frente": "Biopolítica", "dorso": "Tecnología de poder que gestiona la vida, la población y los procesos biológicos de la sociedad.", "libro": "La voluntad de saber"},
+    {"id": "c-placer", "frente": "Placer", "dorso": "Efecto y motor de las relaciones de poder que se intensifica a través de su persecución, secreto y reglamentación.", "libro": "La voluntad de saber"},
+    {"id": "c-neurodiversidad", "frente": "Neurodiversidad", "dorso": "Las diferencias neurológicas como el autismo son variaciones naturales del genoma humano, no patologías que deban curarse.", "libro": "Una tribu propia"},
+    {"id": "c-institucionalizacion", "frente": "Institucionalización", "dorso": "Práctica de recluir a personas con diferencias cognitivas en asilos u hospitales, privándolas de educación y desarrollo social.", "libro": "Una tribu propia"},
+    {"id": "c-diagnostico", "frente": "Diagnóstico", "dorso": "Categorización clínica que, según su amplitud o rigidez, puede abrir puertas al apoyo o condenar al ostracismo.", "libro": "Una tribu propia"},
+    {"id": "c-estigmatizacion", "frente": "Estigmatización", "dorso": "Atribución de culpa y vergüenza a los padres o individuos debido a teorías pseudocientíficas sobre sus conductas.", "libro": "Una tribu propia"},
+    {"id": "c-tecnologia-asistiva", "frente": "Tecnología asistiva", "dorso": "Herramientas y dispositivos que facilitan el aprendizaje y la comunicación sin la presión del juicio humano.", "libro": "Una tribu propia"},
+    {"id": "c-conductismo", "frente": "Conductismo", "dorso": "Enfoque centrado en modificar el comportamiento; históricamente debatió entre el castigo aversivo y el refuerzo positivo.", "libro": "Una tribu propia"},
+    {"id": "c-trauma-desarrollo", "frente": "Trauma del desarrollo", "dorso": "Impacto acumulativo de múltiples formas de trauma de inicio temprano y negligencia en niños y adolescentes.", "libro": "El niño superviviente"},
+    {"id": "c-disociacion", "frente": "Disociación", "dorso": "Fragmentación de las funciones integradas de conciencia, memoria, identidad o percepción como mecanismo de defensa.", "libro": "El niño superviviente"},
+    {"id": "c-evitacion-afectiva", "frente": "Evitación afectiva", "dorso": "Activación automática de patrones sobreaprendidos para evitar la reactividad emocional ligada a recuerdos traumáticos.", "libro": "El niño superviviente"},
+    {"id": "c-neurobiologia", "frente": "Neurobiología interpersonal", "dorso": "Estudio de cómo las relaciones tempranas cuidador-niño moldean las rutas neuronales que regulan el afecto.", "libro": "El niño superviviente"},
+    {"id": "c-mecanismo-adaptacion", "frente": "Mecanismo de adaptación", "dorso": "Conductas o síntomas desarrollados por necesidad para sobrevivir y ajustarse a un entorno hostil o postraumático.", "libro": "El niño superviviente"},
+    {"id": "c-estados-afectivos", "frente": "Estados afectivos", "dorso": "Respuestas biológicas e innatas que actúan como el 'pegamento psíquico' que mantiene unificada la experiencia del yo.", "libro": "El niño superviviente"},
+    {"id": "c-trauma", "frente": "Trauma", "dorso": "Impacto profundo y duradero de la violencia que altera tanto la mente como la biología de una persona.", "libro": "Triste tigre"},
+    {"id": "c-silencio", "frente": "Silencio", "dorso": "Tabú cultural y familiar que protege al agresor y perpetúa la impunidad del abuso.", "libro": "Triste tigre"},
+    {"id": "c-resiliencia", "frente": "Resiliencia", "dorso": "Capacidad de transformar el daño recibido en una narrativa de supervivencia y liberación a través de la palabra.", "libro": "Triste tigre"},
+    {"id": "c-dominacion", "frente": "Dominación", "dorso": "Estructura de control total que anula la voluntad del otro, de forma física, psicológica y simbólica.", "libro": "Triste tigre"},
+    {"id": "c-identidad", "frente": "Identidad", "dorso": "Reconstrucción del ser tras haber sido sometido a la voluntad destructiva de un agresor.", "libro": "Triste tigre"},
+    {"id": "c-abnegado", "frente": "Abnegado", "dorso": "Ser dispuesto a sacrificarse por los demás.", "libro": "Psicología del Mexicano"},
+    {"id": "c-sometido", "frente": "Sometido", "dorso": "Ser de carácter dócil y obediente.", "libro": "Psicología del Mexicano"},
+    {"id": "c-tradicionalista", "frente": "Tradicionalista", "dorso": "Valorizar las costumbres y tradiciones establecidas.", "libro": "Psicología del Mexicano"},
+    {"id": "c-familia", "frente": "Familia", "dorso": "La relación entre los miembros de una familia.", "libro": "Psicología del Mexicano"},
+    {"id": "c-patria", "frente": "Patria", "dorso": "El amor y lealtad hacia la tierra y su gente.", "libro": "Psicología del Mexicano"},
+    {"id": "c-religion", "frente": "Religión", "dorso": "La creencia y práctica de un sistema de creencias espirituales.", "libro": "Psicología del Mexicano"}
+  ]
+}

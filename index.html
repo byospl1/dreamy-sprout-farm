@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#7fb8d8" />
+  <title>Dreamy Sprout Farm</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="stage">
+    <div class="screen">
+      <canvas id="game"></canvas>
+
+      <div id="loading">Cargando la granja…</div>
+
+      <div class="hud hud-top">
+        <div class="chip"><span id="day">Día 1</span></div>
+        <div class="chip"><span id="time">06:00</span></div>
+        <div class="chip gold"><span id="gold">0g</span></div>
+        <div class="chip water">💧<span id="waterlevel">15/15</span></div>
+        <div class="chip mana">✨<span id="mana">12/20</span></div>
+      </div>
+
+      <div class="hud hud-study">
+        <button id="study-btn" class="chip study-chip">🗼 Estudiar</button>
+        <button id="market-btn" class="chip market-chip">🐔 Mercado</button>
+        <button id="cloud-btn" class="chip cloud-chip">☁</button>
+        <div class="chip lvl"><span id="level">Nv 1</span></div>
+        <div class="chip">🔥<span id="streak">0</span></div>
+        <div class="chip">🎯<span id="goal">0/10</span></div>
+      </div>
+
+      <div class="hud hud-inv" id="inv"></div>
+
+      <div class="hud hud-bottom">
+        <div id="toolname">Azada</div>
+        <div id="hotbar"></div>
+      </div>
+
+      <div id="toasts"></div>
+
+      <div id="touch-controls" class="touch-controls">
+        <div id="joystick" class="joystick">
+          <div id="joystick-knob" class="joystick-knob"></div>
+        </div>
+        <div class="touch-actions">
+          <button id="btn-use" class="touch-btn touch-btn-use" title="Usar">✋</button>
+          <button id="btn-interact" class="touch-btn touch-btn-interact" title="Interactuar">🤝</button>
+        </div>
+      </div>
+
+      <button id="help-btn" class="help-btn" title="Controles">?</button>
+      <div id="help-pop" class="help-pop hidden">
+        <div><b>WASD / flechas</b> moverte · <b>Shift</b> correr</div>
+        <div><b>En móvil:</b> joystick para moverte · ✋ usar · 🤝 interactuar</div>
+        <div><b>1-5</b> elegir objeto · <b>Espacio</b> usar · <b>E</b> interactuar</div>
+        <div>Arar cuesta <b>1 ✨</b> y plantar <b>3 ✨</b>. El maná solo se recarga <b>estudiando</b> en la 🗼 Torre del Erudito.</div>
+        <div>Vende en el cofre junto a la casa · compra animales 🐔 junto al gallinero · duerme en la puerta para pasar el día.</div>
+        <div class="credit">Sprites: <b>Sprout Lands</b> — by Cup Nooble</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="src/assets.js"></script>
+  <script src="src/world.js"></script>
+  <script src="src/study.js"></script>
+  <script src="src/save.js"></script>
+  <script src="src/firebase-config.js"></script>
+  <script src="src/game.js"></script>
+  <script src="src/market.js"></script>
+  <script src="src/cloud.js"></script>
+</body>
+</html>

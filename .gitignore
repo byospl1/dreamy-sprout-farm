@@ -1,0 +1,13 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Pack original de Sprout Lands: no se redistribuye completo por licencia
+# (solo los sprites ya usados/compuestos en assets/sprites/ sí se publican).
+# tools/bake.py lo necesita localmente para regenerar assets/sprites/.
+assets/sprout-lands/
+
+# Firebase CLI
+.firebase/
+firebase-debug.log
+firestore-debug.log
