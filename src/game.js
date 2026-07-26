@@ -3,7 +3,9 @@
 // Resolución interna de la cámara: se recalcula con la ventana para que el
 // juego llene la pantalla completa sin estirar los sprites (misma escala,
 // más o menos mundo visible según el tamaño de la ventana).
-const ZOOM = 3; // px de pantalla por px de juego
+const ZOOM_KEY = "dreamy-sprout-farm-zoom";
+const ZOOM_MIN = 1.5, ZOOM_MAX = 5, ZOOM_STEP = 0.5;
+let ZOOM = Number(localStorage.getItem(ZOOM_KEY)) || 3; // px de pantalla por px de juego
 // Mínimos bajos a propósito: en un iPhone angosto, ancho/ZOOM ya puede caer
 // cerca de 130 — si el mínimo fuera mayor (como el 320 que tenía antes),
 // solo el ancho se recortaba y el canvas quedaba con una proporción distinta
@@ -67,6 +69,21 @@ window.addEventListener("orientationchange", resizeCanvas);
 // siempre "resize" en window — visualViewport sí se entera.
 if (window.visualViewport) {
   window.visualViewport.addEventListener("resize", resizeCanvas);
+}
+
+// ZOOM = px de pantalla por cada px de juego: más ZOOM -> sprites más
+// grandes y se ve menos mundo (acercar); menos ZOOM -> sprites más chicos
+// y se ve más mundo (alejar).
+function setZoom(z) {
+  ZOOM = Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, z));
+  localStorage.setItem(ZOOM_KEY, String(ZOOM));
+  resizeCanvas();
+}
+function zoomIn() {
+  setZoom(ZOOM + ZOOM_STEP);
+}
+function zoomOut() {
+  setZoom(ZOOM - ZOOM_STEP);
 }
 
 // El maná es la bisagra entre estudio y granja: solo se recarga estudiando.
@@ -917,6 +934,11 @@ Assets.load()
     document.getElementById("help-btn").addEventListener("click", () => {
       document.getElementById("help-pop").classList.toggle("hidden");
     });
+    document.getElementById("help-close").addEventListener("click", () => {
+      document.getElementById("help-pop").classList.add("hidden");
+    });
+    document.getElementById("zoom-in").addEventListener("click", zoomIn);
+    document.getElementById("zoom-out").addEventListener("click", zoomOut);
     window.addEventListener("beforeunload", saveGame);
 
     if (saved) toast("Partida cargada — día " + game.day + ", nivel " + Study.level);

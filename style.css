@@ -473,18 +473,26 @@ html, body {
   pointer-events: auto;
 }
 
+/* Centrado y fijo en vez de anclado al fondo: así nunca queda debajo de los
+   controles táctiles ni de otro elemento que le tape el botón de cerrar. */
 .help-pop {
-  position: absolute;
-  bottom: 50px;
-  right: 10px;
-  max-width: min(92vw, 420px);
-  background: rgba(25, 32, 28, 0.88);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 60;
+  width: min(92vw, 420px);
+  max-height: 80vh;
+  overflow-y: auto;
+  background: rgba(25, 32, 28, 0.94);
   color: #f0ede0;
-  padding: 12px 16px;
-  border-radius: 12px;
+  padding: 34px 18px 16px;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
   font-size: 12.5px;
   line-height: 1.7;
   pointer-events: auto;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4);
 }
 
 .help-pop.hidden { display: none; }
@@ -496,6 +504,47 @@ html, body {
   font-size: 11px;
   opacity: 0.7;
 }
+
+.help-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(255, 255, 255, 0.14);
+  color: #f0ede0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------- zoom */
+
+.zoom-controls {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  pointer-events: auto;
+}
+
+.zoom-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: rgba(35, 45, 40, 0.62);
+  color: #f6f3e2;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+.zoom-btn:active { background: rgba(90, 120, 80, 0.85); }
 
 /* ------------------------------------------------------------ mercado */
 
@@ -652,7 +701,7 @@ html, body {
   .slot { width: 46px; height: 46px; }
   #toolname { font-size: 11px; }
 
-  .help-pop { bottom: 50px; right: 6px; max-width: 90vw; font-size: 12px; }
+  .help-pop { font-size: 12px; }
 
   .study-panel, .market-panel, .cloud-panel {
     width: 100vw;
