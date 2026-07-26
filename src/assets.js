@@ -1,6 +1,21 @@
 // Sprite sheets and the atlas of named regions inside them.
 // Coordinates were mapped by inspecting each sheet from the Sprout Lands pack.
 
+// Todos los <script src="...js?v=N"> de index.html comparten el mismo N.
+// Lo leemos de nuestra propia URL para reusarlo al pedir los sprites, así
+// una sola versión invalida el caché de todo (código e imágenes) a la vez.
+// Sin esto, navegadores agresivos con el caché (sobre todo Safari en modo
+// "agregar a inicio") pueden quedarse sirviendo JS/PNG viejos indefinidamente.
+const APP_VERSION = (() => {
+  const src = document.currentScript && document.currentScript.src;
+  const m = src && src.match(/[?&]v=([^&]+)/);
+  return m ? m[1] : "dev";
+})();
+
+function withVersion(url) {
+  return url + (url.includes("?") ? "&" : "?") + "v=" + APP_VERSION;
+}
+
 const SHEETS = {
   grass: "assets/sprites/grass.png",
   water: "assets/sprites/water.png",
@@ -84,7 +99,7 @@ const Assets = {
               resolve();
             };
             img.onerror = () => reject(new Error("no se pudo cargar " + SHEETS[key]));
-            img.src = SHEETS[key];
+            img.src = withVersion(SHEETS[key]);
           })
       )
     );

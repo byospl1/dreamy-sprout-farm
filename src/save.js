@@ -26,9 +26,11 @@ const Save = {
 };
 
 function snapshotFarm() {
-  const tilled = [];
+  // Objeto (no array de pares) a propósito: Firestore rechaza arrays
+  // anidados como [[i,v],[i,v]] con "Nested arrays are not supported".
+  const tilled = {};
   for (let i = 0; i < World.tilled.length; i++) {
-    if (World.tilled[i]) tilled.push([i, World.tilled[i]]);
+    if (World.tilled[i]) tilled[i] = World.tilled[i];
   }
   return {
     day: game.day,
@@ -64,7 +66,7 @@ function applyFarm(f) {
     player.y = f.py;
   }
   World.tilled.fill(0);
-  for (const [i, v] of f.tilled || []) World.tilled[i] = v;
+  for (const [i, v] of Object.entries(f.tilled || {})) World.tilled[i] = v;
   World.crops = f.crops || {};
   const all = cows.concat(chickens);
   (f.animals || []).forEach((v, i) => {

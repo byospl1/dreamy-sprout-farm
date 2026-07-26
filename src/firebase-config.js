@@ -8,10 +8,10 @@
 // (localStorage) — el botón ☁ te avisará que falta configurar.
 
 const FIREBASE_CONFIG = {
-  apiKey: "TU_API_KEY",
-  authDomain: "TU_PROYECTO.firebaseapp.com",
-  projectId: "TU_PROYECTO",
-  storageBucket: "TU_PROYECTO.appspot.com",
-  messagingSenderId: "TU_SENDER_ID",
-  appId: "TU_APP_ID",
+  apiKey: "AIzaSyB01l8LzoeHVFOQM4xhv0acEkzJ-Gmgt-k",
+  authDomain: "granja-4cdf6.firebaseapp.com",
+  projectId: "granja-4cdf6",
+  storageBucket: "granja-4cdf6.firebasestorage.app",
+  messagingSenderId: "622844826996",
+  appId: "1:622844826996:web:ad08ceb31f7b26c5938821",
 };
