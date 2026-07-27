@@ -382,7 +382,11 @@ const Study = {
     const q = c.questions[c.index];
     c.answered = i;
     if (i === q.c) {
-      c.hp--;
+      // max(0, …): si el minijuego de enlaces ya había bajado hp a 0 antes
+      // de esta pregunta, bajarlo más lo dejaba negativo y "🟥".repeat(hp)
+      // tronaba a mitad del render — la respuesta se guardaba pero la
+      // pantalla se quedaba congelada sin mostrar bien/mal ni "Siguiente".
+      c.hp = Math.max(0, c.hp - 1);
       this.progress.xp += REWARD.question.xp;
       grantStudyReward(REWARD.question.gold, REWARD.question.mana);
       this.countStudyAction();
@@ -523,7 +527,7 @@ const Study = {
         <span class="mon big">${MONSTER_EMOJI[c.sprite] || "👾"}</span>
         <div>
           <h3>${c.name}</h3>
-          <p>Pregunta ${c.index + 1}/${c.questions.length} · vida ${"🟥".repeat(c.hp)}</p>
+          <p>Pregunta ${c.index + 1}/${c.questions.length} · vida ${"🟥".repeat(Math.max(0, c.hp))}</p>
         </div>
         <div class="hearts">${hearts}</div>
       </div>
