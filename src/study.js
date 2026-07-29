@@ -80,8 +80,39 @@ const Study = {
         "Abre el juego por http:// (python3 -m http.server), no con doble clic.";
       return;
     }
+    await this.mergeCustomContent();
     this.syncContent();
     this.rollDay();
+  },
+
+  // world.json lo regenera el pipeline de Obsidian desde cero en cada corrida
+  // — cualquier cosa agregada a mano ahí se perdería. world-custom.json es
+  // tuyo, el pipeline nunca lo toca, y esto lo fusiona en cada carga. Si el
+  // archivo no existe todavía o falla, el juego sigue normal sin él.
+  async mergeCustomContent() {
+    let custom;
+    try {
+      const res = await fetch("world-custom.json?t=" + Date.now());
+      if (!res.ok) return;
+      custom = await res.json();
+    } catch (err) {
+      return;
+    }
+    const knownIds = new Set(this.world.mazmorras.map((m) => m.id));
+    for (const m of custom.mazmorras || []) {
+      if (knownIds.has(m.id)) {
+        console.warn("world-custom.json: id de mazmorra duplicado, se ignora:", m.id);
+        continue;
+      }
+      this.world.mazmorras.push(m);
+      knownIds.add(m.id);
+    }
+    const knownCardIds = new Set((this.world.cartas || []).map((c) => c.id));
+    for (const c of custom.cartas || []) {
+      if (knownCardIds.has(c.id)) continue;
+      this.world.cartas.push(c);
+      knownCardIds.add(c.id);
+    }
   },
 
   // El pipeline regenera world.json: conservamos el progreso por id y avisamos

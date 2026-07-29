@@ -78,6 +78,21 @@ El progreso se guarda **por id**, así que al regenerar:
 - los libros y cartas nuevos aparecen desde cero y el juego avisa *"¡Contenido nuevo!"*
   cuando cambia `version`.
 
+### Mazmorras agregadas a mano: `world-custom.json`
+
+`world.json` lo **regenera el pipeline desde cero** en cada corrida, así que cualquier
+mazmorra que agregues ahí a mano se perdería en la próxima actualización del vault.
+
+Para contenido que quieres que sobreviva a eso (ej. un repaso de examen que no viene de un
+libro del vault), agrégalo a **`world-custom.json`** en vez de `world.json` — mismo formato,
+solo el array `mazmorras` (y opcionalmente `cartas`). El juego siempre fusiona ambos archivos
+al cargar (`Study.mergeCustomContent()` en `src/study.js`), así que:
+
+- el pipeline puede regenerar `world.json` las veces que quiera sin tocar `world-custom.json`;
+- si por accidente un `id` se repite entre los dos archivos, gana `world.json` y el duplicado
+  de `world-custom.json` se ignora (con aviso en consola);
+- el progreso de estas mazmorras se guarda igual, por id, como cualquier otra.
+
 Sprites de monstruos: el campo `sprite` se mapea a emoji
 (`ghost cultist golem eye snake imp bat slime lich wolf`) en `MONSTER_EMOJI` de
 [src/study.js](src/study.js).
@@ -104,6 +119,7 @@ conectar Firebase paso a paso, con los comandos exactos.
 index.html            página + HUD (DOM, se mantiene nítido) + controles táctiles
 style.css
 world.json            contenido de estudio — lo regenera tu pipeline de Obsidian
+world-custom.json     mazmorras agregadas a mano (ej. repasos de examen) — el pipeline NO la toca
 src/assets.js         carga de sheets + atlas de regiones nombradas
 src/world.js          generación del mapa, autotiling y capa estática pre-renderizada
 src/study.js          La Torre del Erudito: mazmorras, combate, grimorio, repaso, niveles
